@@ -8,6 +8,10 @@ app.use(express.json());
 const cars = require('./cars.json');
 
 //get all cars
+app.get('/', (req, res) => {
+    res.send('API reached');
+  });
+
 app.get('/cars', (req, res) => {
     res.json(cars);
 });
